@@ -1,5 +1,8 @@
+import matter from 'gray-matter';
+import ReactMarkdown from 'react-markdown';
 
-export default function Home() {
+export default function Home({me}) {
+
     return (
         <div className="text-gray-900 text-sm">
             <nav className="bg-gray-900 text-white px-4 py-3 flex items-center justify-between">
@@ -358,9 +361,14 @@ export default function Home() {
                     <div className="readme-container rounded-md border border-gray-400 px-4 py-4 mt-4">
                         <h4 className="font-semibold">README.md</h4>
 
-                        <div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto deleniti, eius et labore magni molestiae, molestias nisi quaerat recusandae, ut velit veritatis voluptatem. Commodi necessitatibus non quam, quis quisquam soluta. Aperiam asperiores aspernatur blanditiis delectus deleniti distinctio dolor dolorem ea error esse mollitia, nisi quaerat quasi quos ratione reiciendis sapiente sed ullam? Deleniti fuga magni odit quia rerum! Cupiditate eum fugiat maxime, minima numquam odio perferendis quisquam sapiente temporibus voluptates! Animi error, incidunt molestiae recusandae sed veniam. A aliquam assumenda beatae dignissimos dolorem et fugiat illo impedit inventore ipsum iure laudantium nobis praesentium, quas, quos recusandae, rerum saepe veritatis?
-                        </div>
+                        {/*<div>*/}
+                        {/*    <ReactMarkdown source={me}  />*/}
+                        {/*</div>*/}
+
+                        <div className="prose max-w-none px-4"
+                            dangerouslySetInnerHTML={{
+                                __html: me
+                            }} />
                     </div>
                 </div>
 
@@ -609,3 +617,13 @@ export default function Home() {
         </div>
     );
 }
+
+Home.getInitialProps = async () => {
+    const content = await import('./readme.md');
+
+    const me = matter(content.default);
+
+    return {
+        me: me.content
+    };
+};
