@@ -14,7 +14,7 @@ export default function Home({me}) {
                         </svg>
                     </a>
 
-                    <div className="relative">
+                    <div className="relative hidden lg:block">
                         <input
                             type="text"
                             className="rounded bg-gray-700 placeholder-white w-72 px-3 py-1"
@@ -28,7 +28,7 @@ export default function Home({me}) {
                         </div>
                     </div>
 
-                    <ul className="flex items-center font-semibold space-x-4">
+                    <ul className="hidden lg:flex items-center font-semibold space-x-4">
                         <li><a href="#" className="hover:text-gray-400">Pull Request</a></li>
                         <li><a href="#" className="hover:text-gray-400">Issues</a></li>
                         <li><a href="#" className="hover:text-gray-400">Marketplace</a></li>
@@ -64,7 +64,7 @@ export default function Home({me}) {
                 </div>
             </nav>
 
-            <div className="repo-stats flex items-center justify-between px-7 py-4">
+            <div className="repo-stats flex flex-col lg:flex-row items-center justify-between px-7 py-4">
                 <div className="flex">
                     <svg aria-label="Repository" className="w-4 fill-current text-gray-600" viewBox="0 0 16 16" role="img">
                         <path fill-rule="evenodd"
@@ -78,7 +78,7 @@ export default function Home({me}) {
                     </div>
                 </div>
 
-                <div className="flex space-x-2">
+                <div className="flex space-x-2 mt-4 lg:mt-0">
                     <div className="flex text-xs">
                         <button className="border border-gray-400 rounded rounded-r-none px-3 py-1 flex items-center space-x-1">
                             <svg className="fill-current text-gray-600 w-4" viewBox="0 0 16 16" aria-hidden="true">
@@ -171,7 +171,7 @@ export default function Home({me}) {
                     </a>
                 </li>
 
-                <li className="font-semibold">
+                <li className="font-semibold hidden lg:block">
                     <a href="#" className="flex items-center px-4 pb-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">
                         <svg className="w-4" viewBox="0 0 16 16" aria-hidden="true">
                             <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM6.379 5.227A.25.25 0 006 5.442v5.117a.25.25 0 00.379.214l4.264-2.559a.25.25 0 000-.428L6.379 5.227z"></path>
@@ -181,7 +181,7 @@ export default function Home({me}) {
                     </a>
                 </li>
 
-                <li className="font-semibold">
+                <li className="font-semibold hidden lg:block">
                     <a href="#" className="flex items-center px-4 pb-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">
                         <svg className="w-4" viewBox="0 0 16 16" aria-hidden="true">
                             <path fill-rule="evenodd" d="M7.467.133a1.75 1.75 0 011.066 0l5.25 1.68A1.75 1.75 0 0115 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.7 1.7 0 01-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 011.217-1.667l5.25-1.68zm.61 1.429a.25.25 0 00-.153 0l-5.25 1.68a.25.25 0 00-.174.238V7c0 1.358.275 2.666 1.057 3.86.784 1.194 2.121 2.34 4.366 3.297a.2.2 0 00.154 0c2.245-.956 3.582-2.104 4.366-3.298C13.225 9.666 13.5 8.36 13.5 7V3.48a.25.25 0 00-.174-.237l-5.25-1.68zM9 10.5a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.75a.75.75 0 10-1.5 0v3a.75.75 0 001.5 0v-3z"></path>
@@ -192,8 +192,8 @@ export default function Home({me}) {
                 </li>
             </ul>
 
-            <div className="container mx-auto my-8 px-4 flex">
-                <div className="file-explorer-container w-3/4 mr-8">
+            <div className="container mx-auto my-8 px-4 flex flex-col lg:flex-row">
+                <div className="file-explorer-container w-full lg:w-3/4 lg:mr-8">
                     <div className="branch-navigation flex items-center justify-between">
                         <div className="flex items-center space-x-2">
                             <button className="border border-gray-400 rounded-md px-4 py-1 hover:bg-gray-200 flex items-center space-x-2">
@@ -209,7 +209,7 @@ export default function Home({me}) {
                                 </svg>
                             </button>
 
-                            <a href="#" className="flex items-center space-x-2 px-3 py-1 group">
+                            <a href="#" className="hidden lg:flex items-center space-x-2 px-3 py-1 group">
                                 <svg className="w-4 fill-current text-gray-600 group-hover:text-blue-600" viewBox="0 0 16 16" aria-hidden="true">
                                     <path fill-rule="evenodd"
                                           d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"></path>
@@ -223,7 +223,7 @@ export default function Home({me}) {
                                 </span>
                             </a>
 
-                            <a href="#" className="flex items-center space-x-2 px-3 py-1 group">
+                            <a href="#" className="hidden lg:flex items-center space-x-2 px-3 py-1 group">
                                 <svg className="w-4 fill-current text-gray-600 group-hover:text-blue-600" viewBox="0 0 16 16" aria-hidden="true">
                                     <path fill-rule="evenodd"
                                           d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
@@ -238,7 +238,7 @@ export default function Home({me}) {
                             </a>
                         </div>
 
-                        <div className="flex items-center space-x-3">
+                        <div className="hidden lg:flex items-center space-x-3">
                             <button className="border border-gray-400 rounded-md text-black hover:bg-gray-100 px-4 py-1 flex items-center space-x-1">
                                 Go to file
                             </button>
@@ -292,7 +292,7 @@ export default function Home({me}) {
                             </a>
 
                             <a href="#"
-                               className="font-mono text-xs text-gray-600 hover:underline hover:text-blue-500 ml-2">
+                               className="font-mono text-xs text-gray-600 hover:underline hover:text-blue-500 ml-2 hidden lg:block">
                                 da070bd
                             </a>
 
@@ -311,7 +311,7 @@ export default function Home({me}) {
                                     3,672
                                 </span>
 
-                                <span>
+                                <span className="hidden lg:inline-block">
                                     commits
                                 </span>
                             </a>
@@ -320,7 +320,7 @@ export default function Home({me}) {
 
                     <div className="file-explorer rounded-md rounded-t-none border border-gray-400 text-gray-700 divide-y divide-gray-400">
                         <div className="flex justify-between px-4 py-2 hover:bg-gray-100">
-                            <div className="w-4/12 flex items-center">
+                            <div className="w-8/12 lg:w-4/12 flex items-center">
                                 <svg aria-label="Directory" className="w-4 fill-current text-blue-400" viewBox="0 0 16 16" role="img">
                                     <path fill-rule="evenodd"
                                           d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3h-6.5a.25.25 0 01-.2-.1l-.9-1.2c-.33-.44-.85-.7-1.4-.7h-3.5z"></path>
@@ -328,18 +328,18 @@ export default function Home({me}) {
 
                                 <a href="#" className="hover:underline hover:text-blue-500 ml-3">.github</a>
                             </div>
-                            <div className="w-6/12 truncate">
+                            <div className="w-6/12 truncate hidden lg:block">
                                 <a href="#" className="text-gray-600 hover:underline hover:text-blue-600">
                                     Initial commit
                                 </a>
                             </div>
-                            <div className="w-2/12 text-right">
+                            <div className="w-4/12 lg:w-2/12 text-right">
                                 <span className="text-gray-600">5 days ago</span>
                             </div>
                         </div>
 
                         <div className="flex justify-between px-4 py-2 hover:bg-gray-100">
-                            <div className="w-4/12 flex items-center">
+                            <div className="w-8/18 lg:w-4/12 flex items-center">
                                 <svg aria-label="File" className="w-4" viewBox="0 0 16 16" role="img">
                                     <path fill-rule="evenodd"
                                           d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"></path>
@@ -347,12 +347,12 @@ export default function Home({me}) {
 
                                 <a href="#" className="hover:underline hover:text-blue-500 ml-3">index.js</a>
                             </div>
-                            <div className="w-6/12 truncate">
+                            <div className="w-6/12 truncate hidden lg:block">
                                 <a href="#" className="text-gray-600 hover:underline hover:text-blue-600">
                                     Initial commit
                                 </a>
                             </div>
-                            <div className="w-2/12 text-right">
+                            <div className="w-4/12 lg:w-2/12 text-right">
                                 <span className="text-gray-600">5 days ago</span>
                             </div>
                         </div>
@@ -372,8 +372,8 @@ export default function Home({me}) {
                     </div>
                 </div>
 
-                <div className="sidebar w-1/4">
-                    <div className="about">
+                <div className="sidebar w-full lg:w-1/4">
+                    <div className="about mt-4 lg:mt-0">
                         <h4 className="text-base font-semibold">About</h4>
                         <p className="text-base mt-4">A utility-first CSS framework for rapid UI development</p>
 
@@ -589,8 +589,8 @@ export default function Home({me}) {
                 </div>
             </div>
 
-            <footer className="container mx-auto text-xs border-t border-gray-400 py-10 flex items-center justify-between">
-                <ul className="flex items-center space-x-12">
+            <footer className="container mx-auto text-xs border-t border-gray-400 py-10 flex flex-col lg:flex-row items-center justify-between">
+                <ul className="flex items-center space-x-6 lg:space-x-12">
                     <li>&copy; 2020 GitHub, Inc.</li>
                     <li><a href="#" className="text-blue-600 hover:underline">Terms</a></li>
                     <li><a href="#" className="text-blue-600 hover:underline">Privacy</a></li>
@@ -599,13 +599,15 @@ export default function Home({me}) {
                     <li><a href="#" className="text-blue-600 hover:underline">Docs</a></li>
                 </ul>
 
-                <a href="#">
-                    <svg className="w-4 fill-current text-gray-400 hover:text-gray-700" viewBox="0 0 16 16" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-                    </svg>
-                </a>
+                <div className="mx-16 hidden lg:block">
+                    <a href="#">
+                        <svg className="w-4 fill-current text-gray-400 hover:text-gray-700" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
 
-                <ul className="flex items-center space-x-12">
+                <ul className="flex items-center space-x-6 lg:space-x-12 mt-4 lh:mt-0">
                     <li><a href="#" className="text-blue-600 hover:underline">Contact GitHub</a></li>
                     <li><a href="#" className="text-blue-600 hover:underline">Pricing</a></li>
                     <li><a href="#" className="text-blue-600 hover:underline">API</a></li>
